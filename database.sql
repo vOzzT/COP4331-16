@@ -24,7 +24,7 @@ CREATE TABLE `COP4331`.`Contacts` (
 
 USE COP4331;
 
-/*
+
 insert into Users (FirstName,LastName,Login,Password) VALUES 
 ('Rick','Leinecker','RickL','COP4331');
 
@@ -68,4 +68,3 @@ insert into Contacts (FirstName,LastName, Phone, Email, UserID) VALUES
 
 insert into Contacts (FirstName,LastName, Phone, Email, UserID) VALUES
 ('Ify', 'Okafor', '954-123-7575', 'if43871@ucf.edu', '3');
-*/
