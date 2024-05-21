@@ -68,3 +68,14 @@ insert into Contacts (FirstName,LastName, Phone, Email, UserID) VALUES
 
 insert into Contacts (FirstName,LastName, Phone, Email, UserID) VALUES
 ('Ify', 'Okafor', '954-123-7575', 'if43871@ucf.edu', '3');
+
+select * from Users;
+select * from Contacts;
+
+select * from Contacts where UserID=1;
+select * from Contacts where UserID=3;
+
+Use COP4331;
+create user 'Dev' identified by 'WeLoveCOP4331';
+
+grant all privileges on COP4331.* to 'Dev'@'%';
