@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class = "main">
+      <h1 id = "hello" >Contact Manager System</h1>
+      <h3>Enter your login credentials</h3>
+      <form action="">
+          <label for="first">
+                Username:
+            </label>
+          <input type="text" 
+                 id="first"
+                 name="first" 
+                 placeholder="Enter your Username" required>
+        
+          <br> <! –– Necessary line break style="text-align: center" ––>
+          <label for="password">
+                Password:
+            </label>
+          <input type="password"
+                 id="password" 
+                 name="password" 
+                 placeholder="Enter your Password" required>
+
+          <div class="wrap">
+              <br>
+              <button type="submit"
+                      onclick="solve()">
+                  Submit
+              </button>
+          </div>
+      </form>
+      <p>Not registered? 
+            <a href="#" 
+             style="text-decoration: none;">
+              Create an account
+          </a>
+      </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
