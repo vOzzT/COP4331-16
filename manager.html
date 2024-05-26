@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="manager.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Rock+Salt"
+    rel="stylesheet"
+    type="text/css" />
+</head>
+
+<body>
+
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <a href="#">Logout</a>
+    <a href="#">About Us</a>
+    <a href="#">GitHub</a>
+  </div>
+
+  <!-- Page content -->
+
+  
+  <div class="header">
+
+    <div>
+      <h1 id = "greet">
+        Greetings User!
+      </h1>
+
+      <p id = "sub">
+        Choose between searching or adding a user!
+      </p>
+    </div>
+
+    
+    <form id = "shift">
+
+      <input class="button" type="submit" value="Refresh" />
+      <input class="button" type="submit" value="Add User" />
+      
+      <input class="input" style="width: 33%;" type="text" placeholder="Search the database..." />
+      <input class="button" type="submit" value="Submit" />
+
+    </form>
+
+
+    
+    
+  </div>
+
+
+  <section class="sect">
+    
+    <table class="table" id="contacts">
+      <thead>
+        <tr id = "head">
+          <th>First&nbspName</th>
+          <th>Last&nbspName</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+    </table>
+    
+  </section>
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
