@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url();
+  height: 130vh;
+  background-color: black;
+}
+.inquiry {
+  font-weight: bolder;
+  font-size: 50px;
+  letter-spacing: 3px;
+  color: white;
+  text-transform: capitalize;
+}
+.design {
+  background: orangered;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 30px;
+  color: white;
+  letter-spacing: 3px;
+  margin-top: 0%;
+  text-transform: capitalize;
+}
+.variable {
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-top: 0%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: left;
+}
+.name {
+  color: blue;
+  margin-top: 0%;
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  text-decoration: none;
+  display: inline-flex;
+  margin-right: 50px;
+  margin-top: 50px;
+}

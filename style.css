@@ -1,67 +1,94 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-.container {
-  margin: 50px auto;
-  max-width: 500px;
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+.design {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url("image.png");
+  height: 130vh;
 }
-
-h1 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 30px;
+.navigation {
+  width: 1100px;
+  height: 75px;
+  margin: auto;
 }
-
-form {
+.icon {
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+.toolbar {
+  width: 400px;
+  float: left;
+  height: 90px;
+  margin-left: 400px;
+}
+ul {
+  float: left;
   display: flex;
-  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+ul li a {
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  font-weight: bolder;
+  transition: 0.5s ease-in-out;
+  color: orangered;
+}
+ul li a:hover {
+  color: blue;
+}
+.tabs {
+  color: white;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  float: left;
+  padding-left: 0%;
+  padding-top: 10px;
+}
+.pagename {
+  height: auto;
+  width: 800px;
+  margin: auto;
+  color: white;
+  position: relative;
+  font-size: larger;
+  font-weight: bolder;
+  float: left;
 }
 
-label {
-  font-size: 18px;
-  margin-bottom: 5px;
+.pagename .describe {
+  padding-left: 30px;
+  padding-bottom: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  line-height: 30px;
 }
 
-input[type="text"],
-input[type="password"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+.pagename h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 50px;
+  padding-left: 10px;
+  margin-top: 9%;
+  letter-spacing: 5px;
+}
+.pagename span {
+  font-size: 65px;
+  color: blue;
 }
 
-.check {
-  margin-bottom: 10px;
-}
-
-.check label {
-  margin-top: 5px;
-}
-
-input[type = "submit"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 18px;
-  background-color: #000bff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
-input[type = "submit"] hover {
-  background-color: #444054;
+.pagename p {
+  color: orangered;
 }

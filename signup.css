@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(fantasy.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form {
+  margin: 40px;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+input,
+select {
+  width: 400px;
+  height: 30px;
+  display: block;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+}
+.signupbutton {
+  width: 400px;
+  height: 40px;
+  background: orangered;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.signupbutton:hover {
+  background: green;
+  cursor: pointer;
+}
+.accounttitle {
+  color: blue;
+  font-weight: bolder;
+  margin: 20px;
+  letter-spacing: 3px;
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.redirect {
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: orangered;
+  color: white;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+.redirect:hover {
+  background: green;
+  cursor: pointer;
+}
+.doit {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 25px;
+  margin: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+}
+.question {
+  color: white;
+  font-size: 25px;
+  margin: 20px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-decoration: none;
+  text-align: center;
+}
+.design {
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 20px;
+  letter-spacing: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+.unique {
+  color: blue;
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: wavy;
+  text-align: center;
+}
+.connect {
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+.social {
+  width: 400px;
+  height: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: orangered;
+  color: white;
+  border-radius: 10px;
+  margin-top: 60px;
+}

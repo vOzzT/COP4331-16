@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Adventure Sign Up</title>
+    <link rel="stylesheet" href="signup.css" />
+    
+  </head>
+  <body>
+    <div class="Largebox">
+      <form class="form" id="Create an Account">
+        <h2 class="accounttitle"><em> Miko's Fantasy Adventure</em></h2>
+        <h1 class="pagetitle"><strong>Create <span class="unique">an</span> Account</strong></h1>
+        <p class="question">Already have an account?<a href = "./contact.html"><em class="redirect">Log in</em></a></p>
+        <div class="secondBox">
+          <input
+            type="text"
+            class="firstname"
+            autofocus
+            placeholder="first name"
+          />
+          <input
+            type="text"
+            class="lastname"
+            autofocus
+            placeholder="last name"
+          />
+          <select>
+            <option value="">Select country</option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Argentina">Argentina</option ption>
+            <option value="India">India</option>
+            <option value="South Africa">South Africa</option>
+          </select>
+          <input
+            type="email"
+            class="youremailaddress"
+            placeholder="Enter email address"
+          />
+          <input
+            type="password"
+            class="enterpassword"
+            autofocus
+            placeholder="Enter password"
+          />
+          <input
+            type="text"
+            class="confirmpassword"
+            autofocus
+            placeholder="Retype password"
+          />
+          <button class="signupbutton" type="submit"><a href="#"><strong class="doit">SIGN UP</strong></a></button>
+          <p class="design"><bold>OR</bold></p>
+          <h4 class="connect">Continue with <a href = "./contact.html"><em class="social"> Google </em></a> and <a href = "./contact.html"><em class="social">Facebook</em></a></h4>
+        </div>
+      </form>
+    </div>
+    <script src="./src/signup.js"></script>
+  </body>
+</html>
