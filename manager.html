@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="css/manager.css" rel="stylesheet" type="text/css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <a id="logoutButton" onclick="doLogout();">Logout</a>
+    <a href="#">About Us</a>
+    <a href="https://github.com/vOzzT/COP4331-16">GitHub</a>
+  </div>
+
+  <!-- Page content -->
+
+
+  <div class="header">
+
+    <div>
+      <h1 id="greet">
+        Greetings User!
+      </h1>
+
+      <p id="sub">
+        Choose between searching or adding a user!
+      </p>
+    </div>
+
+
+    <form id = "shift">
+
+      <input class="input" style="width: 33%;" type="text" placeholder="Search the database..." />
+      <input type="button" class="buttons" type="submit" value="Submit" />
+      <input type="button" class="buttons" type="submit" value="Refresh" />
+      <input type="button" class="buttons" type="submit" value="Add User" />
+
+
+    </form>
+
+
+
+  </div>
+
+
+  <section class="sect">
+
+    <table class="table" id="contacts">
+      <thead>
+        <tr id="head">
+          <th>First&nbspName</th>
+          <th>Last&nbspName</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+    </table>
+
+  </section>
+
+
+  
+</body>
+
+</html>
