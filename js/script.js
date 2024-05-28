@@ -354,7 +354,7 @@ function delete_row(no) {
 
         let jsonPayload = JSON.stringify(tmp);
 
-        let url = urlBase + '/DeleteContacts.' + extension;
+        let url = urlBase + '/DeleteContact.' + extension;
 
         let xhr = new XMLHttpRequest();
         xhr.open("POST", url, true);
