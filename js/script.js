@@ -6,8 +6,20 @@ let firstName = "";
 let lastName = "";
 const ids = []
 
-function goToAddUser() {
-  window.location.href = "addUser.html";
+//function goToAddUser() {
+//  window.location.href = "addUser.html";
+//}
+
+function showTable() {
+    var x = document.getElementById("addMe");
+    var contacts = document.getElementById("contactsTable")
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        contacts.style.display = "none";
+    } else {
+        x.style.display = "none";
+        contacts.style.display = "block";
+    }
 }
 
 function doLogin() {
@@ -261,12 +273,12 @@ function loadContacts() {
                     text += "<tr id='row" + i + "'>"
                     text += "<td id='first_Name" + i + "'><span>" + jsonObject.results[i].FirstName + "</span></td>";
                     text += "<td id='last_Name" + i + "'><span>" + jsonObject.results[i].LastName + "</span></td>";
-                    text += "<td id='email" + i + "'><span>" + jsonObject.results[i].EmailAddress + "</span></td>";
-                    text += "<td id='phone" + i + "'><span>" + jsonObject.results[i].PhoneNumber + "</span></td>";
+                    text += "<td id='email" + i + "'><span>" + jsonObject.results[i].Email + "</span></td>";
+                    text += "<td id='phone" + i + "'><span>" + jsonObject.results[i].Phone + "</span></td>";
                     text += "<td>" +
-                        "<button type='button' id='edit_button" + i + "' class='w3-button w3-circle w3-lime' onclick='edit_row(" + i + ")'>" + "<span class='glyphicon glyphicon-edit'></span>" + "</button>" +
-                        "<button type='button' id='save_button" + i + "' value='Save' class='w3-button w3-circle w3-lime' onclick='save_row(" + i + ")' style='display: none'>" + "<span class='glyphicon glyphicon-saved'></span>" + "</button>" +
-                        "<button type='button' onclick='delete_row(" + i + ")' class='w3-button w3-circle w3-amber'>" + "<span class='glyphicon glyphicon-trash'></span> " + "</button>" + "</td>";
+                        "<button type='button' id='edit_button" + i + "' class='edit-btn' onclick='edit_row(" + i + ")'>" + "Edit</button>" +
+                        "<button type='button' id='save_button" + i + "' value='Save' class='edit-btn' onclick='save_row(" + i + ")' style='display: none'>" + "Save</button>" +
+                        "<button type='button' onclick='delete_row(" + i + ")' class='delete-btn'>" + "Delete</button>" + "</td>";
                     text += "<tr/>"
                 }
                 text += "</table>"
@@ -315,10 +327,10 @@ function save_row(no) {
     document.getElementById("save_button" + no).style.display = "none";
 
     let tmp = {
-        phoneNumber: phone_val,
-        emailAddress: email_val,
-        newFirstName: namef_val,
-        newLastName: namel_val,
+        firstname: namef_val,
+        lastname: namel_val,
+        phone: phone_val,
+        email:email_val,
         id: id_val
     };
 

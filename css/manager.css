@@ -1,226 +1,392 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-
 * {
-  font-family: sans-serif;
-}
-
-/* Style the header with a grey background and some padding */
-.header {
-  margin: 0px;
-  height: 150px;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-}
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-/* Float the link section to the right */
-.header-right {
-  float: right;
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+    font-family: sans-serif;
   }
 
-  .header-right {
-    float: none;
-  }
+/* body formatting */
+body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
 }
 
-
-/* The sidebar menu */
-.sidenav {
-  height: 100%;
-  /* Full-height: remove this if you want "auto" height */
-  width: 150px;
-  /* Set the width of the sidebar */
-  position: fixed;
-  /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1;
-  /* Stay on top */
-  top: 0;
-  /* Stay at the top */
-  left: 0;
-  background-color: #111;
-  /* Black */
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 20px;
+/* content from leinecker */
+.content {
+    padding: 1px 16px;
+    height: 1000px;
+    margin-top: 25px;
+    margin-left: 270px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+.loggedInDiv {
+    font-weight: bolder;
+    font-size: 2vw;
+    align-self: center;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.accessUIDiv {
+    margin: 10px;
+    padding: 10px 10px;
+    text-align: center;
+    align-self: center;
 }
 
+.column {
+    display: inline-block;
+    padding: 10px 10px;
+    vertical-align: middle;
+}
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
+.column button {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
     font-size: 18px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tables {
+    align-self: center;
+}
+
+.addContacts {
+    align-self: center;
+}
+
+/* add contacts table formatting */
+#addMe {
+    display: none;
+    border-radius: 17px;
+    position: relative;
+    background: #da9987;
+    max-width: 350px;
+    margin: 0 auto 50px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#addMe input {
+    border-radius: 17px;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+#addMe>input:valid {
+    border: 2px solid #009345;
+    ;
+}
+
+#addMe>input:invalid {
+    border: 2px solid red;
+}
+
+#addMe>input:invalid:required {
+    background-image: white;
+}
+
+#addMe button {
+    border-radius: 17px;
+    outline: 0;
+    background: gainsboro;
+    color: #000bff;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#contacts td input {
+    border-radius: 17px;
+    outline: 0;
+    background: #fbde99;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* button formatting */
+.btn {
+    color: #007D2F;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 2.3vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em 1.2em;
+    margin: 0.6em 0.3em 0.3em 0;
+    float: right;
+}
+
+.btn:hover {
+    color: #897261;
+}
+
+/* search bar formatting */
+.search-container {
+    background: #fff;
+    height: 30px;
+    width: 400px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
+        -4px -4px 6px 0 rgba(116, 125, 136, .2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover>.search-input {
+    width: 400px;
+}
+
+.search-container .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+
+.search-container:hover {
+    animation: linear 3;
+}
+
+.search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #000bff;
+    font-size: 16px;
+    background-color: #fff;
   }
+
+.refresh-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000bff;
+    color: #000bff;
+    font-size: 16px;
+    background-color: #fff;
+  }
+
+  .add-btn {
+    padding: 10px;
+    border: none;
+    border-color: #000bff;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #000bff;
+  }
+
+span {
+    color: rgb(164, 0, 0);
 }
 
-#contacts {
-  padding-left: 150px;
-  font-size: 24px;
-  
+p {
+    color: rgb(164, 0, 0);
+}
+
+/* table formatting */
+#contactsTable {
+    display: block;
+    height: 500px;
 }
 
 
-#greet, #sub {
-  padding-left: 150px;
+table {
+    width:100%;
+    table-layout: fixed;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 
-#shift {
-  padding-left: 150px;
-}
-
-.sect {
-  padding-left: 140px;
+.tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid #7ac8e7;
 }
 /* graphics and colors */
 
-thead,
-tfoot {
-  color: white;
-  text-shadow: 1px 1px 1px black;
+#contacts td,
+#contacts th {
+    border: 1px solid #7ac8e7;
 }
 
-thead th,
-tfoot th,
-tfoot td {
-  /*background: linear-gradient(to bottom, lightblue, darkblue);*/
-
-  background-color: skyblue;
-  border: 3px solid black;
-  
+#contacts tr:hover {
+    background-color: #111;
 }
 
-/* zebra striping */
-
-tbody tr:nth-child(odd) {
-  background-color: lightcoral;
+#contacts th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00067c;
+    background-color: #87ceeb;
+    text-transform: uppercase;
 }
 
-tbody tr:nth-child(even) {
-  background-color: lightblue;
+#contacts td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 15px;
+    font-weight: bold;
+    color: #dad8d8;
+    background-color: #da9987;
+}
+#contacts td span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 100%;
+    color: #111111;
 }
 
-tbody tr {
-  background-image: url(noise.png);
+#contacts td .edit-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #000bff;
+    color: #000bff;
+    font-size: 16px;
+    background-color: #da9987;
 }
 
-table {
-  background-color: lightblue;
+#contacts td .delete-btn {
+    padding: 10px;
+    border: none;
+    border-color: #000bff;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #000bff;
 }
 
-/* spacing */
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid blue;
+/* for custom scrollbar for webkit browser*/
+::-webkit-scrollbar {
+    width: 6px;
 }
 
-thead th:nth-child(1) {
-  width: 20%;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-thead th:nth-child(2) {
-  width: 20%;
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-thead th:nth-child(3) {
-  width: 20%;
+/*side navigation menu*/
+
+.sidenav {
+    width: 264px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0px;
+    overflow: auto;
+    /*disables horizontal scroll*/
+    position: fixed;
+    /*scroll bar stays in place when user is scrolling*/
+    background-color: #111;
 }
 
-thead th:nth-child(4) {
-  width: 20%;
+/*navigation links*/
+.sidenav img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
 }
 
-thead th:nth-child(5) {
-  width: 20%;
+.sidenav a {
+    padding: 10px 0px 15px 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #da9987;
 }
 
-th,
-td {
-  padding: 20px;
-}
-
-/* Buttons */
 .buttons {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  background-color: #000bff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px 0px 15px 0px;
+    display: block;
+}
+
+/*buttons that are on the sidebar*/
+.sidebuttons {
+    padding: 10px 0px 15px 0px;
+    display: inline-block;
+}
+
+.sidebuttons:hover {
+    color: #f1f1f1;
 }
 
 .buttons:hover {
-  background-color: #444054;
-  color: #FFFFFF;
-  opacity: 50%;
+    color: #897261;
 }
 
-input[type="text"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.font {
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    color: #007D2F;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 80px;
 }
