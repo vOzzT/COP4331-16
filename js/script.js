@@ -6,6 +6,10 @@ let firstName = "";
 let lastName = "";
 const ids = []
 
+function goToAddUser() {
+  window.location.href = "addUser.html";
+}
+
 function doLogin() {
     userId = 0;
     firstName = "";
