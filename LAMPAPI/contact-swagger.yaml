@@ -1,0 +1,143 @@
+swagger: '2.0'
+info:
+  description: This is the API documentation for the COP 4331 Contact Manager App
+  version: 1.0.0
+  title: Contact Manager App
+  
+  contact:
+    email: ma688873@ucf.edu
+  
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+paths:
+  /Login.php:
+    post:
+      tags:
+      - Users
+      summary: Logs in to the contact manager app
+      operationId: dlLogin
+      description: Logs in to contact manager app
+      consumes:
+      - applicatoin/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: loginItem
+        description: Login
+        schema:
+          $ref: '#/definitions/Login'
+      responses:
+        200:
+          description: OK
+        404:
+          description: URL Not Found
+        500:
+          description: Server Error
+  /AddContact.php:
+    post:
+      tags:
+      - Contacts
+      summary: Adds a contact
+      operationId: addContact
+      description: Adds a contact to the contact app database
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: contactItem
+        description: Contact
+        schema:
+          $ref: '#/definitions/Contact'
+      responses:
+        200:
+          description: OK
+        404:
+          description: URL Not Found 
+        500:
+          description: Server Error
+  /SearchContacts.php:
+    post:
+      tags:
+      - Search
+      summary: Searches contacts
+      operationId: searchContact
+      description: Searches contacts from the contact app database
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: searchItem
+        description: Contact Search
+        schema:
+          $ref: '#/definitions/Search'
+      responses:
+        200:
+          description: OK
+        404:
+          description: URL Not Found
+        500:
+          description: Server Error
+          
+definitions:
+  Login:
+    type: object
+    required:
+    - login
+    - password
+    properties:
+      login:
+        type: string
+        example: "fred"
+      password:
+        type: string
+        example: "secret"
+  Contact:
+    type: object
+    required:
+    - userId
+    - firstName
+    - lastname
+    - phone
+    - email
+    properties:
+      userId:
+        type: integer
+        example: 1
+      firstname:
+        type: string
+        example: "Johnny"
+      lastname:
+        type: string
+        example: "Appleseed"
+      phone:
+        type: string
+        example: "555-555-5555"
+      email:
+        type: string
+        example: "johhnyappleseed@gmail.com"
+  Search:
+    type: object
+    required:
+    - userId
+    - search
+    properties:
+      userId:
+        type: integer
+        example: 1
+      search:
+        type: string
+        example: "Johhny"
+
+
+host: cop4331-maximus.xyz
+basePath: /LAMPAPI
+schemes:
+- http
