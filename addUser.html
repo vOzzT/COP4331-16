@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 for="header"> Add User! </h1>
+    <form>
+
+      <label for="firstName" id="first">First Name:</label>
+      <input type="text" id="firstName" placeholder="Enter a First Name">
+
+      <label for="lastName" id="last">Last Name:</label>
+      <input type="text" id="lastName" placeholder="Enter a Last Name">
+
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" placeholder="Enter a valid Phone Number">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="Enter a valid email address">
+
+      <a href="manager.html">Back to home?</a>
+
+      <button type="button" id="loginButton" class="buttons" onclick="doSignup();"> Submit </button>
+      <span class="text" id="signupResult"></span>
+
+    </form>
+  </div>
+
+  <div class = "container" id = "emailMessage">
+    <p id="result"></p>
+  </div>
+
+  <div class = "container" id = "phoneMessage">
+    <p id="phoneResult"></p>
+  </div>
+
+  <script>
+
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    
+    // When the user clicks on the email field, show the message box
+    email.onfocus = function() {
+      document.getElementById("emailMessage").style.display = "block";
+    }
+
+    // When the user clicks outside of the email field, hide the message box
+    email.onblur = function() {
+      document.getElementById("emailMessage").style.display = "none";
+    }
+
+    email.onkeyup = function() {
+      const validateEmail = (email) => {
+        return email.match(
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+      };
+
+      const validate1 = () => {
+        const $result = $('#result');
+        const email = $('#email').val();
+        $result.text('');
+
+        if(validateEmail(email)){
+          $result.text('✔:  ' + email + ' is valid.');
+          $result.css('color', 'green');
+        } else{
+          $result.text('✖:  ' + email + ' is invalid.');
+          $result.css('color', 'red');
+        }
+        return false;
+      }
+
+      $('#email').on('input', validate1);
+    }
+    
+
+    // When the user clicks on the email field, show the message box
+      phone.onfocus = function() {
+      document.getElementById("phoneMessage").style.display = "block";
+    }
+
+    // When the user clicks outside of the email field, hide the message box
+      phone.onblur = function() {
+      document.getElementById("phoneMessage").style.display = "none";
+    }
+
+
+      phone.onkeyup = function() {
+      const validatePhone = (phone) => {
+        return phone.match(
+          /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]{8,14}$/g
+        );
+      };
+
+        
+      const validate2 = () => {
+        const $phoneResult = $('#phoneResult');
+        const phone = $('#phone').val();
+        $phoneResult.text('');
+
+        if(validatePhone(phone)){
+          $phoneResult.text('✔:  ' + phone + ' is valid.');
+          $phoneResult.css('color', 'green');
+        } else{
+          $phoneResult.text('✖:  ' + phone + ' is invalid.');
+          $phoneResult.css('color', 'red');
+        }
+        return false;
+      }
+
+      $('#phone').on('input', validate2);
+    }
+    
+  </script>
+  
+  
+</body>
+
+</html>
