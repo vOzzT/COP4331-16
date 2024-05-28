@@ -14,7 +14,7 @@ function doLogin() {
     let login = document.getElementById("loginName").value;
     let password = document.getElementById("loginPassword").value;
 
-    var hash = md5(password);
+    // var hash = md5(password);
     if (!validLoginForm(login, password)) {
         document.getElementById("loginResult").innerHTML = "invalid username or password";
         return;
@@ -23,7 +23,7 @@ function doLogin() {
 
     let tmp = {
         login: login,
-        password: hash
+        password: password
     };
 
     let jsonPayload = JSON.stringify(tmp);
@@ -190,18 +190,18 @@ function addContact() {
 
     let firstname = document.getElementById("contactTextFirst").value;
     let lastname = document.getElementById("contactTextLast").value;
-    let phonenumber = document.getElementById("contactTextNumber").value;
-    let emailaddress = document.getElementById("contactTextEmail").value;
+    let phone = document.getElementById("contactTextNumber").value;
+    let email = document.getElementById("contactTextEmail").value;
 
-    if (!validAddContact(firstname, lastname, phonenumber, emailaddress)) {
+    if (!validAddContact(firstname, lastname, phone, email)) {
         console.log("INVALID FIRST NAME, LAST NAME, PHONE, OR EMAIL SUBMITTED");
         return;
     }
     let tmp = {
         firstName: firstname,
         lastName: lastname,
-        phoneNumber: phonenumber,
-        emailAddress: emailaddress,
+        phone: phone,
+        email: email,
         userId: userId
     };
 
