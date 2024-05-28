@@ -74,7 +74,7 @@ function doSignup() {
     }
 
 
-    var hash = md5(password);
+    // var hash = md5(password);
 
     document.getElementById("signupResult").innerHTML = "";
 
@@ -82,7 +82,7 @@ function doSignup() {
         firstName: firstName,
         lastName: lastName,
         login: username,
-        password: hash
+        password: password
     };
 
     let jsonPayload = JSON.stringify(tmp);
@@ -208,7 +208,7 @@ function addContact() {
 
     let jsonPayload = JSON.stringify(tmp);
 
-    let url = urlBase + '/AddContacts.' + extension;
+    let url = urlBase + '/AddContact.' + extension;
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
@@ -320,7 +320,7 @@ function save_row(no) {
 
     let jsonPayload = JSON.stringify(tmp);
 
-    let url = urlBase + '/UpdateContacts.' + extension;
+    let url = urlBase + '/UpdateContact.' + extension;
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
