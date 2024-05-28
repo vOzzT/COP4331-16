@@ -29,7 +29,7 @@
       <input type="text" id="username" placeholder="Enter a valid username">
 
       <label for="psw">Password</label>
-      <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Enter a valid password">
+      <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Must contain at least one lowercase letter, one uppercase letter, one number, one special character, and at least 8 or more characters" required placeholder="Enter a valid password">
 
       <a href="login.html">Already have a log in?</a>
 
@@ -44,6 +44,7 @@
     <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
     <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
     <p id="number" class="invalid">A <b>number</b></p>
+    <p id="special" class="invalid">A <b>special character</b></p>
     <p id="length" class="invalid">Minimum <b>8 characters</b></p>
   </div>
 
@@ -53,6 +54,7 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+var special = document.getElementById("special");
 
 var email = document.getElementById("email");
 
@@ -96,6 +98,15 @@ myInput.onkeyup = function() {
   } else {
     number.classList.remove("valid");
     number.classList.add("invalid");
+  }
+
+  var specials = /[!@#$%^&*]/g;
+  if(myInput.value.match(specials)) {
+    special.classList.remove("invalid");
+    special.classList.add("valid");
+  } else {
+    special.classList.remove("valid");
+    special.classList.add("invalid");
   }
 
   // Validate length
