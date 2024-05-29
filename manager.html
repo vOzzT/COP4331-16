@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fakebook</title>
+  <link href="css/manager.css" rel="stylesheet" type="text/css" />
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+		readCookie();
+		loadContacts();
+	}, false);
+</script>
+</head>
+
+<body>
+
+  <!-- Side navigation -->
+  <div class="sidenav">
+	<img id="logo" src="images/f.png" alt="logo image">
+    <a id="logoutButton" onclick="doLogout();">Logout</a>
+    <a href="about.html">About Us</a>
+    <a href="https://github.com/vOzzT/COP4331-16">GitHub</a>
+  </div>
+
+  <!-- Page content -->
+
+
+  <div class="content">
+		<div class="loggedInDiv">
+			<span style="color:#193498" id="userName"></span><br/>
+		</div>
+		<div class="accessUIDiv">
+			<br />
+			<div class="column">
+				<div class="search-container">
+					<input onkeyup=searchContacts() type="text" name="search" id="searchText" placeholder="Search..."
+						class="search-input">
+				</div>
+			</div>
+      <input type="button" class="search-btn" type="submit" value="Search" onclick="searchContacts();"/>
+      <input type="button" class="refresh-btn" type="submit" value="Refresh" onclick="loadContacts();"/>
+      <input type="button" class="add-btn" type="submit" value="Add Contact" onclick="showTable();"/>
+		</div>
+		<!--add contact form-->
+		<div class="addContacts">
+			<form id="addMe" action="" method="post">
+				<input type="text" id="contactTextFirst" placeholder="First Name" required>
+				<input type="text" id="contactTextLast" placeholder="Last Name" required>
+				<input type="text" id="contactTextNumber" placeholder="XXX-XXX-XXXX" required
+					pattern="^[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$">
+				<input type="text" id="contactTextEmail" placeholder="name@email.com"
+					pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+				<button type="button" id="addContactButton" class="buttons font" onclick="addContact();"> Add Contact
+				</button>
+			</form>
+		</div>
+		<!--contact table-->
+		<div class="tables">
+			<div class="tbl-content" id="contactsTable">
+				<table id="contacts" cellpadding="0" cellspacing="0" border="0">
+					<thread>
+						<tr>
+							<th>First&nbspName</th>
+							<th>Last&nbspName</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th></th>
+						</tr>
+					</thread>
+					<tbody id="tbody"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

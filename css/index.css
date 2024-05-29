@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+
+.header {
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  /*padding: 20px 10px; */;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: center;
+}
+
+#greet {
+  padding-left: 60px;
+  font-size: 50px;
+  color: blue;
+}
+
+#sub {
+  padding-left: 60px;
+}
+
+#foot {
+  color: blue;
+}
+
+#F {
+  padding-top: 0px;
+}
+
+
+#tabs {
+  padding-right: 60px;
+  text-align: right;
+}

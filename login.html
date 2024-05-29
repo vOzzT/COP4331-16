@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fakebook</title>
+  <link href="css/login.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/md5.js"></script>
+</head>
+
+<body>
+
+  <div class = "container" >
+    <h1 for = "header"> Login </h1>
+    <form>
+      
+      <label for = "username" id = "user" >Username:</label>
+      <input type = "text" id = "loginName" placeholder = "Enter your username">
+      
+      <label for = "password">Password:</label>
+      <input type = "password" id="loginPassword" placeholder = "Enter your password">
+
+      <a href="sign.html">Sign Up?</a>
+      
+      <button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Submit </button>
+      <span class="text" id="loginResult"></span>
+      
+    </form>
+  </div>
+  
+
+</body>
+
+</html>
