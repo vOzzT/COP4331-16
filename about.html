@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/manager.css" />
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            readCookie();
+            loadContacts();
+        }, false);
+    </script>
+</head>
+
+<body>
+    <div class="bodyContainer">
+        <div class="sidenav">
+            <img id="logo" src="images/f.png" alt="logo image">
+            <a id="logoutButton" onclick="doLogout();">Logout</a>
+            <a href="manager.html">Contact Manager</a>
+            <a href="https://github.com/vOzzT/COP4331-16">GitHub</a>
+        </div>
+        <div class="container">
+            <div class="grid-container">
+                <div class="grid-item"><br>Simeon Feliz - Project Manager</div>
+                <div class="grid-item"><br>Kensley Cadet – Front End</div>
+                <div class="grid-item"><br>Ifunanya Okafor – Front End</div>
+                <div class="grid-item"><br>Maximus Whitaker – API</div>
+                <div class="grid-item"><br>Oscar Rodriguez – DB & API</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

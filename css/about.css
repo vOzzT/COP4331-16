@@ -1,0 +1,29 @@
+* {
+  font-family: sans-serif;
+}
+
+/* grid w/images and names */
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 20px; /* Increased the gap between grid items */
+  padding: 10px;
+  margin-left: 250px;
+  margin-right: 50px;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #113cfc; 
+  padding: 40px 0; /* Adjusted padding for more separation */
+}
+.grid-item img {
+  width: 45%;
+  height: auto;
+  opacity: 80%;
+}
